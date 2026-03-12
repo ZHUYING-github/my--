@@ -1,9 +1,7 @@
 \documentclass[12pt,a4paper]{article}
 
 % ── Packages ──────────────────────────────────────────────────────────────────
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[english]{babel}
+\usepackage[UTF8]{ctex}
 \usepackage{geometry}
 \usepackage{graphicx}
 \usepackage{booktabs}
@@ -47,7 +45,7 @@
 % ── Header / footer ───────────────────────────────────────────────────────────
 \pagestyle{fancy}
 \fancyhf{}
-\rhead{\small Digital Nomads Report}
+\rhead{\small Digital Nomads Market Research Report / 数字游民市场调查报告}
 \lhead{\small \leftmark}
 \cfoot{\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
@@ -103,38 +101,150 @@ labour market, co-working, platform economy, policy.
 \clearpage
 
 % ══════════════════════════════════════════════════════════════════════════════
-\section{Introduction}
+\section{绪论}
+\label{sec:intro}
 % ══════════════════════════════════════════════════════════════════════════════
 
-The convergence of high-speed internet connectivity, cloud computing, and
-collaborative software has fundamentally altered the spatial relationship
-between workers and their employers. Nowhere is this transformation more
-visible than in the rise of digital nomadism—a work mode in which individuals
-perform knowledge-intensive tasks remotely while continuously or semi-
-continuously travelling across cities, countries, or continents.
+\subsection{研究背景}
 
-Although remote work itself is not new, its mainstream adoption accelerated
-dramatically during the COVID-19 pandemic (2020–2022), when lockdowns forced
-organisations worldwide to implement distributed workflows. As restrictions
-lifted, a non-trivial share of the newly remote workforce did not return to
-traditional office arrangements; instead, they embraced geographic freedom as
-a permanent feature of their professional lives.
+随着移动互联网技术的持续深化与云计算、协同办公平台的广泛普及，远程工作
+逐渐从少数技术极客的专属选项演变为跨行业、跨地域的主流工作模式之一。尤其
+是2020年以来，新冠疫情的全球蔓延加速推动了远程办公的规范化进程，使众多知
+识型劳动者得以突破地理约束，在世界各地同步开展工作。在此背景下，
+"数字游民"（Digital Nomad）群体——即以数字化手段谋生、不受固定工作地点束
+缚、长期或间歇性游走于不同城市乃至不同国家的工作者——呈现出显著的规模扩
+张态势\citep{MBO2023}。
 
-Estimates of the digital-nomad population vary widely because of definitional
-ambiguity and measurement challenges, but recent surveys suggest that the
-global figure lies between 35 and 40 million individuals, with projections
-exceeding 60 million by 2030
-\citep{MBO2023,StatistaNomads2024}. This growth has prompted governments,
-municipalities, technology companies, and civil-society organisations to reckon
-with the economic, fiscal, and social consequences of large-scale human
-mobility untethered from conventional employment geography.
+据MBO Partners和Statista等机构的调查数据，2023年全球数字游民规模已突破
+3500万人，预计至2030年将超过6000万人\citep{StatistaNomads2024}。与此同时，
+全球已有超过50个国家和地区推出了专属"数字游民签证"政策，为这一群体提供
+合法的跨境工作居留通道，折射出国际社会对这一新兴就业形态的广泛关注与政策
+认可。
 
-This report is structured as follows. Section~\ref{sec:background} reviews the
-conceptual and historical background. Section~\ref{sec:profile} profiles the
-contemporary digital nomad. Section~\ref{sec:enablers} discusses the
-technological and infrastructural enablers. Section~\ref{sec:challenges}
-analyses key challenges. Section~\ref{sec:policy} examines emerging policy
-responses. Section~\ref{sec:conclusion} offers conclusions and recommendations.
+在中国，随着互联网经济的蓬勃发展、自由职业者队伍的持续壮大以及"灵活就业"
+政策的逐步推进，以数字化手段实现地点无关工作的群体同样呈现快速增长趋势。
+然而，国内学术界与市场研究领域对数字游民群体的系统性研究尚处于起步阶段，
+针对其规模特征、消费行为、市场需求及支撑生态的定量调查严重缺乏，制约了相
+关行业政策的精准制定与市场主体的战略决策。本报告正是基于上述现实需求而展
+开的系统性市场调查研究。
+
+\subsection{研究目的与意义}
+
+\subsubsection{研究目的}
+
+本报告以数字游民群体为核心研究对象，通过系统性市场调查与多维度数据分析，
+旨在实现以下四项研究目标：
+
+\begin{enumerate}[label=\arabic*.]
+  \item \textbf{全面刻画数字游民群体画像}：厘清当前数字游民群体的人口统计
+        学特征、职业构成、收入分布、目的地偏好及消费行为模式，为市场细分与
+        用户定位提供翔实的数据支撑。
+
+  \item \textbf{深入挖掘市场需求痛点}：识别数字游民在工作基础设施、居住服
+        务、法律保障、社交连接和职业发展等维度上的核心需求与现存痛点，为相
+        关产品与服务的创新设计提供决策依据。
+
+  \item \textbf{评估市场规模与商业机会}：量化数字游民经济的市场体量与增长
+        潜力，梳理联合办公空间、数字游民社区、旅居服务平台等新兴商业模式的
+        发展机遇，推动相关行业精准布局。
+
+  \item \textbf{提出政策优化建议}：基于调查发现，就签证政策、税务制度、社
+        会保障等方面向政策制定者提供具有实操性的改进建议，助力灵活就业生态
+        的健康可持续发展。
+\end{enumerate}
+
+\subsubsection{研究意义}
+
+\textbf{理论意义：}本报告填补了国内数字游民群体系统性量化研究的空白，构建
+了适用于中国情境的数字游民市场分析框架，为后续相关领域的学术研究提供理论
+基础与方法参照，也为劳动经济学和平台经济学在新兴灵活就业领域的理论拓展积
+累了实证素材。
+
+\textbf{实践意义：}研究结论为联合办公空间运营商、旅行科技企业、人力资源服
+务机构及地方政府部门提供决策参考，有助于推动服务供给侧的精准改革与资源配
+置优化，进而促进数字经济与旅游经济的深度融合发展，形成新的经济增长点。
+
+\textbf{社会意义：}深入了解数字游民群体的生存状态与核心诉求，有助于在政策
+层面切实保障这一新兴群体的合法权益，引导其可持续、健康地融入社会经济体系，
+同时为推进"新就业形态"治理体系的现代化提供参考路径。
+
+\subsection{研究内容与方法}
+
+\subsubsection{研究内容}
+
+本报告共分为七节，整体研究框架如下所示：
+
+\textbf{第一节\enspace 绪论}：阐述研究背景，明确研究目的与意义，概述研究
+内容、方法及创新点，为后续研究奠定框架基础。
+
+\textbf{第二节\enspace 概念界定与文献综述}：厘清"数字游民"的概念内涵与外
+延（Background and Conceptual Framework），系统梳理国内外相关研究成果，
+分析现有文献的局限性，提出本报告的研究切入点。
+
+\textbf{第三节\enspace 数字游民群体画像}：基于一手调查数据，从人口特征、
+职业结构、收入水平、地域分布等维度构建数字游民群体的详细画像（Profile of
+the Contemporary Digital Nomad）。
+
+\textbf{第四节\enspace 市场需求与痛点分析}：聚焦数字游民在技术基础设施、
+协同工具及共享经济平台等方面的核心需求，识别市场供需缺口及待开发机遇
+（Technological and Infrastructural Enablers）。
+
+\textbf{第五节\enspace 挑战与风险评估}：系统梳理数字游民在法律、收入稳定
+性、医疗保障、社会融合与环境责任等维度面临的痛点与挑战（Challenges and
+Pain Points）。
+
+\textbf{第六节\enspace 政策环境与对策建议}：梳理全球主要经济体的数字游民
+政策实践，对比分析国内外经验差异，提出针对性的政策优化路径与落实建议
+（Policy Responses and Emerging Frameworks）。
+
+\textbf{第七节\enspace 研究结论}：归纳核心研究发现，提炼政策启示，指出研
+究局限与未来方向（Conclusion）。
+
+\subsubsection{研究方法}
+
+本报告综合运用以下五种研究方法，以确保调查数据的系统性与研究结论的严谨性：
+
+\begin{itemize}
+  \item \textbf{问卷调查法：}设计结构化调查问卷，通过线上渠道面向数字游民
+        及潜在群体开展大规模调查，获取一手定量数据，覆盖群体特征、消费偏好
+        及痛点感知等核心维度。
+
+  \item \textbf{深度访谈法：}对典型数字游民代表、相关企业负责人及政策研究
+        专家开展半结构化深度访谈，获取定性洞察与情景化信息，补充问卷数据的
+        深度解读。
+
+  \item \textbf{文献研究法：}系统检索国内外学术数据库及权威行业报告，对现
+        有研究成果进行综合分析与批判性评述，明确本研究的学术定位。
+
+  \item \textbf{比较分析法：}对不同国家和地区的数字游民政策、市场规模及发
+        展模式进行横向比较，提炼可供中国情境借鉴的经验与教训。
+
+  \item \textbf{统计分析法：}运用描述性统计、交叉分析及回归分析等方法对问
+        卷数据进行深度挖掘，确保研究结论具备充分的统计有效性与可重复性。
+\end{itemize}
+
+\subsection{研究创新点}
+
+相较于现有研究，本报告在以下四个维度具有显著的创新性：
+
+\begin{enumerate}[label=\arabic*.]
+  \item \textbf{研究视角创新：}本报告率先从市场调查视角系统考察中国情境下
+        数字游民群体的规模结构与市场需求，突破以往研究以欧美发达国家为主要
+        样本的局限，填补本土化视角与原始数据的空白，为国内市场精准研判提供
+        实证依据。
+
+  \item \textbf{研究框架创新：}构建"群体画像—需求识别—生态分析—政策评估"
+        四维一体的市场分析框架，将行为经济学、平台经济理论与劳动力市场分析
+        有机融合，较已有研究在分析维度上更为全面系统，理论自洽性更强。
+
+  \item \textbf{研究方法创新：}采用定量与定性相结合的混合研究方法（Mixed
+        Methods），将大规模问卷调查的统计数据与深度访谈的质性叙述有机整合，
+        弥补单一研究方法的局限，显著提升研究结论的可信度与解释力。
+
+  \item \textbf{应用价值创新：}在理论分析基础上，提出可量化的政策建议与商
+        业运营策略，形成从数据采集、现象分析到决策支撑的完整研究闭环，切实
+        增强了研究成果的实践转化价值与社会应用潜力。
+\end{enumerate}
 
 % ══════════════════════════════════════════════════════════════════════════════
 \section{Background and Conceptual Framework}
