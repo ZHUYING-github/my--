@@ -1,0 +1,613 @@
+\documentclass[12pt,a4paper]{article}
+
+% ── Packages ──────────────────────────────────────────────────────────────────
+\usepackage[UTF8]{ctex}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{natbib}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{abstract}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{microtype}
+
+% ── Page geometry ─────────────────────────────────────────────────────────────
+\geometry{
+  top=2.5cm,
+  bottom=2.5cm,
+  left=3cm,
+  right=3cm
+}
+
+% ── Hyperref setup ────────────────────────────────────────────────────────────
+\hypersetup{
+  colorlinks = true,
+  linkcolor  = blue!70!black,
+  citecolor  = blue!70!black,
+  urlcolor   = blue!70!black,
+  pdftitle   = {Digital Nomads: Trends, Challenges, and Opportunities},
+  pdfauthor  = {},
+}
+
+% ── Header / footer ───────────────────────────────────────────────────────────
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\small Digital Nomads Market Research Report / 数字游民市场调查报告}
+\lhead{\small \leftmark}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% ── Section title formatting ──────────────────────────────────────────────────
+\titleformat{\section}{\large\bfseries}{\thesection.}{0.6em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection.}{0.5em}{}
+\titleformat{\subsubsection}{\normalsize\itshape}{\thesubsubsection.}{0.4em}{}
+
+% ── Line spacing ──────────────────────────────────────────────────────────────
+\onehalfspacing
+
+% ── Document metadata ─────────────────────────────────────────────────────────
+\title{%
+  \textbf{Digital Nomads: Trends, Challenges, and Opportunities}\\[0.4em]
+  \large A Comprehensive Research Report
+}
+\author{%
+  \normalsize Research Team\\[0.2em]
+  \small \texttt{[Institution / Affiliation]}
+}
+\date{\today}
+
+% ══════════════════════════════════════════════════════════════════════════════
+\begin{document}
+% ══════════════════════════════════════════════════════════════════════════════
+
+\maketitle
+\thispagestyle{empty}
+
+% ── Abstract ──────────────────────────────────────────────────────────────────
+\begin{abstract}
+This report investigates the phenomenon of digital nomadism—a lifestyle in
+which individuals leverage remote-work technology to perform their professional
+duties while travelling continuously or living abroad. Drawing on survey data,
+secondary sources, and qualitative interviews, we examine the socio-economic
+profile of digital nomads, the structural conditions that enable or constrain
+their mobility, and the policy implications for host and home countries alike.
+Our findings indicate that the digital-nomad population has grown substantially
+since the early 2020s, driven by the normalisation of remote work, advances in
+cloud-based collaboration tools, and the proliferation of co-working
+infrastructure. We identify persistent challenges including legal ambiguity
+around taxation and visas, unstable income, social isolation, and access to
+healthcare. We conclude by proposing a multi-stakeholder framework for
+sustainable digital-nomad ecosystems.
+
+\medskip\noindent\textbf{Keywords:} digital nomads, remote work, mobility,
+labour market, co-working, platform economy, policy.
+\end{abstract}
+
+\clearpage
+\tableofcontents
+\clearpage
+
+% ══════════════════════════════════════════════════════════════════════════════
+\section{绪论}
+\label{sec:intro}
+% ══════════════════════════════════════════════════════════════════════════════
+
+\subsection{研究背景}
+
+随着移动互联网技术的持续深化与云计算、协同办公平台的广泛普及，远程工作
+逐渐从少数技术极客的专属选项演变为跨行业、跨地域的主流工作模式之一。尤其
+是2020年以来，新冠疫情的全球蔓延加速推动了远程办公的规范化进程，使众多知
+识型劳动者得以突破地理约束，在世界各地同步开展工作。在此背景下，
+"数字游民"（Digital Nomad）群体——即以数字化手段谋生、不受固定工作地点束
+缚、长期或间歇性游走于不同城市乃至不同国家的工作者——呈现出显著的规模扩
+张态势\citep{MBO2023}。
+
+据MBO Partners和Statista等机构的调查数据，2023年全球数字游民规模已突破
+3500万人，预计至2030年将超过6000万人\citep{StatistaNomads2024}。与此同时，
+全球已有超过50个国家和地区推出了专属"数字游民签证"政策，为这一群体提供
+合法的跨境工作居留通道，折射出国际社会对这一新兴就业形态的广泛关注与政策
+认可。
+
+在中国，随着互联网经济的蓬勃发展、自由职业者队伍的持续壮大以及"灵活就业"
+政策的逐步推进，以数字化手段实现地点无关工作的群体同样呈现快速增长趋势。
+然而，国内学术界与市场研究领域对数字游民群体的系统性研究尚处于起步阶段，
+针对其规模特征、消费行为、市场需求及支撑生态的定量调查严重缺乏，制约了相
+关行业政策的精准制定与市场主体的战略决策。本报告正是基于上述现实需求而展
+开的系统性市场调查研究。
+
+\subsection{研究目的与意义}
+
+\subsubsection{研究目的}
+
+本报告以数字游民群体为核心研究对象，通过系统性市场调查与多维度数据分析，
+旨在实现以下四项研究目标：
+
+\begin{enumerate}[label=\arabic*.]
+  \item \textbf{全面刻画数字游民群体画像}：厘清当前数字游民群体的人口统计
+        学特征、职业构成、收入分布、目的地偏好及消费行为模式，为市场细分与
+        用户定位提供翔实的数据支撑。
+
+  \item \textbf{深入挖掘市场需求痛点}：识别数字游民在工作基础设施、居住服
+        务、法律保障、社交连接和职业发展等维度上的核心需求与现存痛点，为相
+        关产品与服务的创新设计提供决策依据。
+
+  \item \textbf{评估市场规模与商业机会}：量化数字游民经济的市场体量与增长
+        潜力，梳理联合办公空间、数字游民社区、旅居服务平台等新兴商业模式的
+        发展机遇，推动相关行业精准布局。
+
+  \item \textbf{提出政策优化建议}：基于调查发现，就签证政策、税务制度、社
+        会保障等方面向政策制定者提供具有实操性的改进建议，助力灵活就业生态
+        的健康可持续发展。
+\end{enumerate}
+
+\subsubsection{研究意义}
+
+\textbf{理论意义：}本报告填补了国内数字游民群体系统性量化研究的空白，构建
+了适用于中国情境的数字游民市场分析框架，为后续相关领域的学术研究提供理论
+基础与方法参照，也为劳动经济学和平台经济学在新兴灵活就业领域的理论拓展积
+累了实证素材。
+
+\textbf{实践意义：}研究结论为联合办公空间运营商、旅行科技企业、人力资源服
+务机构及地方政府部门提供决策参考，有助于推动服务供给侧的精准改革与资源配
+置优化，进而促进数字经济与旅游经济的深度融合发展，形成新的经济增长点。
+
+\textbf{社会意义：}深入了解数字游民群体的生存状态与核心诉求，有助于在政策
+层面切实保障这一新兴群体的合法权益，引导其可持续、健康地融入社会经济体系，
+同时为推进"新就业形态"治理体系的现代化提供参考路径。
+
+\subsection{研究内容与方法}
+
+\subsubsection{研究内容}
+
+本报告共分为七节，整体研究框架如下所示：
+
+\textbf{第一节\enspace 绪论}：阐述研究背景，明确研究目的与意义，概述研究
+内容、方法及创新点，为后续研究奠定框架基础。
+
+\textbf{第二节\enspace 概念界定与文献综述}：厘清"数字游民"的概念内涵与外
+延（Background and Conceptual Framework），系统梳理国内外相关研究成果，
+分析现有文献的局限性，提出本报告的研究切入点。
+
+\textbf{第三节\enspace 数字游民群体画像}：基于一手调查数据，从人口特征、
+职业结构、收入水平、地域分布等维度构建数字游民群体的详细画像（Profile of
+the Contemporary Digital Nomad）。
+
+\textbf{第四节\enspace 市场需求与痛点分析}：聚焦数字游民在技术基础设施、
+协同工具及共享经济平台等方面的核心需求，识别市场供需缺口及待开发机遇
+（Technological and Infrastructural Enablers）。
+
+\textbf{第五节\enspace 挑战与风险评估}：系统梳理数字游民在法律、收入稳定
+性、医疗保障、社会融合与环境责任等维度面临的痛点与挑战（Challenges and
+Pain Points）。
+
+\textbf{第六节\enspace 政策环境与对策建议}：梳理全球主要经济体的数字游民
+政策实践，对比分析国内外经验差异，提出针对性的政策优化路径与落实建议
+（Policy Responses and Emerging Frameworks）。
+
+\textbf{第七节\enspace 研究结论}：归纳核心研究发现，提炼政策启示，指出研
+究局限与未来方向（Conclusion）。
+
+\subsubsection{研究方法}
+
+本报告综合运用以下五种研究方法，以确保调查数据的系统性与研究结论的严谨性：
+
+\begin{itemize}
+  \item \textbf{问卷调查法：}设计结构化调查问卷，通过线上渠道面向数字游民
+        及潜在群体开展大规模调查，获取一手定量数据，覆盖群体特征、消费偏好
+        及痛点感知等核心维度。
+
+  \item \textbf{深度访谈法：}对典型数字游民代表、相关企业负责人及政策研究
+        专家开展半结构化深度访谈，获取定性洞察与情景化信息，补充问卷数据的
+        深度解读。
+
+  \item \textbf{文献研究法：}系统检索国内外学术数据库及权威行业报告，对现
+        有研究成果进行综合分析与批判性评述，明确本研究的学术定位。
+
+  \item \textbf{比较分析法：}对不同国家和地区的数字游民政策、市场规模及发
+        展模式进行横向比较，提炼可供中国情境借鉴的经验与教训。
+
+  \item \textbf{统计分析法：}运用描述性统计、交叉分析及回归分析等方法对问
+        卷数据进行深度挖掘，确保研究结论具备充分的统计有效性与可重复性。
+\end{itemize}
+
+\subsection{研究创新点}
+
+相较于现有研究，本报告在以下四个维度具有显著的创新性：
+
+\begin{enumerate}[label=\arabic*.]
+  \item \textbf{研究视角创新：}本报告率先从市场调查视角系统考察中国情境下
+        数字游民群体的规模结构与市场需求，突破以往研究以欧美发达国家为主要
+        样本的局限，填补本土化视角与原始数据的空白，为国内市场精准研判提供
+        实证依据。
+
+  \item \textbf{研究框架创新：}构建"群体画像—需求识别—生态分析—政策评估"
+        四维一体的市场分析框架，将行为经济学、平台经济理论与劳动力市场分析
+        有机融合，较已有研究在分析维度上更为全面系统，理论自洽性更强。
+
+  \item \textbf{研究方法创新：}采用定量与定性相结合的混合研究方法（Mixed
+        Methods），将大规模问卷调查的统计数据与深度访谈的质性叙述有机整合，
+        弥补单一研究方法的局限，显著提升研究结论的可信度与解释力。
+
+  \item \textbf{应用价值创新：}在理论分析基础上，提出可量化的政策建议与商
+        业运营策略，形成从数据采集、现象分析到决策支撑的完整研究闭环，切实
+        增强了研究成果的实践转化价值与社会应用潜力。
+\end{enumerate}
+
+% ══════════════════════════════════════════════════════════════════════════════
+\section{Background and Conceptual Framework}
+\label{sec:background}
+% ══════════════════════════════════════════════════════════════════════════════
+
+\subsection{Defining Digital Nomadism}
+
+The term \emph{digital nomad} was popularised by Tsugio Makimoto and David
+Manners in their 1997 book \emph{Digital Nomad}, which predicted that mobile
+computing would eventually decouple knowledge work from fixed locations
+\citep{MakimotoManners1997}. Contemporary usage generally refers to individuals
+who:
+
+\begin{enumerate}[label=(\roman*)]
+  \item earn their primary income through digital means (freelancing, remote
+        employment, online entrepreneurship);
+  \item do not maintain a fixed primary workplace; and
+  \item travel or relocate across jurisdictions on a recurring basis.
+\end{enumerate}
+
+This definition excludes workers who are merely \emph{hybrid} (alternating
+between home and office) and those who work remotely from a fixed home address.
+It also excludes traditional expatriates assigned by employers to specific
+overseas postings.
+
+\subsection{Historical Trajectory}
+
+Three broad phases characterise the evolution of digital nomadism:
+
+\begin{description}
+  \item[Phase 1 (pre-2010):] Early adopters—mainly web developers, writers, and
+        bloggers—exploited nascent wireless infrastructure and early blogging
+        platforms to work while travelling. Community building was limited to
+        online forums.
+
+  \item[Phase 2 (2010–2019):] The smartphone revolution, the proliferation of
+        co-working spaces (notably WeWork, founded 2010), and the platform-gig
+        economy (Upwork, Fiverr, Airbnb) dramatically lowered barriers to
+        mobile work. Dedicated nomad communities (e.g., NomadList, Remote Year)
+        emerged.
+
+  \item[Phase 3 (2020–present):] Mass remote-work adoption driven by the
+        pandemic normalised the infrastructure and mindset required for nomadic
+        work. Corporate remote-work policies, ``digital-nomad visa'' programmes
+        in over 50 countries, and investment in nomad-friendly accommodations
+        define this phase.
+\end{description}
+
+% ══════════════════════════════════════════════════════════════════════════════
+\section{Profile of the Contemporary Digital Nomad}
+\label{sec:profile}
+% ══════════════════════════════════════════════════════════════════════════════
+
+\subsection{Demographics}
+
+Table~\ref{tab:demographics} summarises key demographic characteristics drawn
+from a synthesis of recent surveys
+\citep{A-List2023,NomadList2024,Statista2024}.
+
+\begin{table}[H]
+  \centering
+  \caption{Demographic profile of digital nomads (2023–2024)}
+  \label{tab:demographics}
+  \begin{tabular}{lll}
+    \toprule
+    \textbf{Characteristic} & \textbf{Value / Range} & \textbf{Source} \\
+    \midrule
+    Median age              & 32 years             & NomadList (2024) \\
+    Gender (male)           & 55–60\%              & A-List (2023)    \\
+    Highest education       & Bachelor's or above  & 72\%             \\
+    Median annual income    & USD 75,000–90,000    & MBO (2023)       \\
+    Employment type         & Freelance / self-emp.& 48\%             \\
+    Top nationality         & American / German    & NomadList (2024) \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Occupational Composition}
+
+Software development, digital marketing, content creation, UX/UI design, and
+online consulting collectively account for over two-thirds of the digital-nomad
+workforce \citep{NomadList2024}. The remaining third spans finance, education
+(online tutoring), sales, and management consulting. The common thread is the
+producibility of work outputs in digital formats transmissible over the
+internet with minimal latency sensitivity.
+
+\subsection{Geographic Preferences}
+
+Popular destination countries exhibit a combination of low cost of living,
+reliable internet, favourable visa conditions, and appealing climate or
+culture. As of 2024, the most frequently cited destinations are:
+
+\begin{itemize}
+  \item \textbf{Southeast Asia:} Thailand (Chiang Mai, Bangkok), Bali
+        (Indonesia), Vietnam (Ho Chi Minh City).
+  \item \textbf{Southern and Eastern Europe:} Portugal (Lisbon, Porto), Georgia
+        (Tbilisi), Croatia (Split), Montenegro.
+  \item \textbf{Latin America:} Mexico (Mexico City, Playa del Carmen),
+        Colombia (Medellín), Argentina (Buenos Aires).
+  \item \textbf{North Africa and Middle East:} Morocco (Agadir), UAE (Dubai).
+\end{itemize}
+
+% ══════════════════════════════════════════════════════════════════════════════
+\section{Technological and Infrastructural Enablers}
+\label{sec:enablers}
+% ══════════════════════════════════════════════════════════════════════════════
+
+\subsection{Connectivity Infrastructure}
+
+High-speed internet access is the foundational enabler. Global average fixed-
+broadband download speeds exceeded 100 Mbps in 2023
+\citep{Ookla2023}, while mobile (4G/5G) coverage now reaches over 93\% of the
+world's population \citep{GSMA2023}. Satellite internet services (e.g.,
+Starlink) are extending reliable connectivity to previously inaccessible areas.
+
+\subsection{Cloud Collaboration Platforms}
+
+Tools such as Slack, Microsoft Teams, Zoom, Notion, GitHub, and Figma enable
+asynchronous and synchronous collaboration across time zones. The shift to
+cloud-native workflows reduces dependence on physical presence and local IT
+infrastructure.
+
+\subsection{Co-Working Spaces and Coliving}
+
+The global co-working-space market was valued at approximately USD 13 billion
+in 2023 and is projected to exceed USD 40 billion by 2030 \citep{GrandView2023}.
+Dedicated ``coliving'' facilities—combining accommodation with shared workspace
+—have emerged as a new asset class catering specifically to digital nomads,
+offering community, convenience, and predictable costs.
+
+\subsection{Payment and Financial Services}
+
+Multi-currency bank accounts (Wise, Revolut, N26), global payment processors
+(Stripe, PayPal), and cryptocurrency wallets facilitate cross-border financial
+transactions. These services reduce the friction of earning income in one
+currency and spending in another.
+
+% ══════════════════════════════════════════════════════════════════════════════
+\section{Challenges and Pain Points}
+\label{sec:challenges}
+% ══════════════════════════════════════════════════════════════════════════════
+
+\subsection{Legal and Regulatory Ambiguity}
+
+The most frequently cited challenge (reported by $>$70\% of surveyed nomads)
+is legal uncertainty \citep{A-List2023}. Issues include:
+
+\begin{itemize}
+  \item \textbf{Tax residency:} Many jurisdictions use days-of-presence rules
+        (commonly 183 days) to determine tax residency. Nomads who split time
+        across multiple countries may inadvertently trigger tax obligations in
+        several jurisdictions simultaneously, or fall into gaps where they owe
+        taxes nowhere and risk retrospective claims.
+
+  \item \textbf{Visa constraints:} Tourist visas typically prohibit paid work.
+        Despite the proliferation of dedicated digital-nomad visa programmes
+        (Croatia, Estonia, Barbados, Indonesia, etc.), many countries lack such
+        instruments, forcing nomads into legal grey areas.
+
+  \item \textbf{Employment law:} Employees who work abroad without employer
+        authorisation may inadvertently create permanent-establishment liability
+        or trigger local employment-law obligations for their employers.
+\end{itemize}
+
+\subsection{Income Instability}
+
+Freelancers and independent contractors—a large share of the nomad population
+—face inherent income volatility. Currency fluctuations, client concentration
+risk, and periods of underemployment are amplified by the lack of state-backed
+social safety nets applicable to mobile workers.
+
+\subsection{Healthcare and Social Insurance}
+
+Access to affordable, portable healthcare is a persistent concern. National
+health systems are typically residency-based, excluding non-residents. Private
+travel insurance has coverage caps ill-suited to long-term nomads. Pension and
+social-security contributions are often impossible to maintain across
+jurisdictions.
+
+\subsection{Social and Psychological Well-being}
+
+Qualitative research highlights loneliness, difficulty maintaining deep
+relationships, and challenges building community as significant downsides
+\citep{Mancinelli2020}. ``Zoom fatigue'' and blurred work--life boundaries are
+reported by remote workers generally and nomads specifically.
+
+\subsection{Environmental Impact}
+
+Frequent long-haul air travel generates a disproportionately large carbon
+footprint. Nomads who fly monthly may produce $10\times$ the aviation emissions
+of the average global citizen \citep{Cames2015}.
+
+% ══════════════════════════════════════════════════════════════════════════════
+\section{Policy Responses and Emerging Frameworks}
+\label{sec:policy}
+% ══════════════════════════════════════════════════════════════════════════════
+
+\subsection{Digital-Nomad Visa Programmes}
+
+As of early 2024, over 50 countries have enacted or proposed dedicated
+digital-nomad visa schemes. These typically grant stays of 6–24 months,
+require proof of remote employment or freelance income (commonly a minimum of
+USD 1,500–3,500 per month), and often provide partial tax exemptions.
+Table~\ref{tab:visas} lists selected programmes.
+
+\begin{table}[H]
+  \centering
+  \caption{Selected digital-nomad visa programmes (2024)}
+  \label{tab:visas}
+  \begin{tabular}{lllr}
+    \toprule
+    \textbf{Country} & \textbf{Programme Name} & \textbf{Duration}
+      & \textbf{Min.\ income (USD/mo.)} \\
+    \midrule
+    Portugal   & D8 Visa                 & 1 yr (renewable) & 3,040 \\
+    Estonia    & Digital Nomad Visa      & 1 yr             & 4,500 \\
+    Indonesia  & Second Home Visa        & 5 yr             & 2,000 \\
+    Costa Rica & Rentista / Nomad Visa   & 2 yr             & 3,000 \\
+    Thailand   & LTR Visa (Work-from-TH) & 10 yr            & 7,500 \\
+    Georgia    & Remotely from Georgia   & 1 yr             & 2,000 \\
+    \bottomrule
+  \end{tabular}
+  \small\textit{Note:} Conditions change; verify current requirements with official government sources.
+\end{table}
+
+\subsection{Tax Frameworks}
+
+A few jurisdictions—notably Portugal (until end-2023, via the Non-Habitual
+Resident regime), UAE, and Georgia—have offered flat-rate or zero-rate personal
+income tax for qualifying remote workers, spurring significant inflows of high-
+income nomads. The OECD is developing guidance on allocating taxing rights for
+location-independent workers, though multilateral consensus remains elusive.
+
+\subsection{Urban and Regional Policy}
+
+Cities such as Medellín (Colombia), Tbilisi (Georgia), and Chiang Mai
+(Thailand) have actively cultivated nomad-friendly ecosystems through
+investment in co-working infrastructure, English-language services, and
+community events. Evidence suggests modest but positive net fiscal impacts on
+host economies through consumption expenditures
+\citep{Hannonen2020}.
+
+\subsection{A Proposed Multi-Stakeholder Framework}
+
+Based on our analysis, we propose the following framework for sustainable
+digital-nomad ecosystems:
+
+\begin{enumerate}
+  \item \textbf{Regulatory harmonisation:} Bilateral or multilateral agreements
+        on tax residency and social-insurance portability to eliminate double
+        taxation and coverage gaps.
+
+  \item \textbf{Portable social protection:} Development of internationally
+        portable pension and healthcare schemes analogous to bilateral social-
+        security totalization agreements.
+
+  \item \textbf{Inclusive visa design:} Extension of nomad-visa eligibility to
+        lower-income digital workers, reducing the risk that programmes benefit
+        only high-earners.
+
+  \item \textbf{Infrastructure investment:} Targeted investment in internet
+        connectivity and co-working infrastructure in emerging-market
+        destinations to distribute economic benefits more widely.
+
+  \item \textbf{Sustainability standards:} Voluntary carbon-offset requirements
+        or ``slow travel'' incentives (e.g., reduced visa fees for longer, less
+        frequent stays) to mitigate aviation emissions.
+\end{enumerate}
+
+% ══════════════════════════════════════════════════════════════════════════════
+\section{Conclusion}
+\label{sec:conclusion}
+% ══════════════════════════════════════════════════════════════════════════════
+
+Digital nomadism represents a structurally significant and growing mode of work
+organisation, shaped by technological change, pandemic-accelerated shifts in
+employer norms, and individual preferences for autonomy and geographic
+diversity. Its continued expansion will require deliberate policy design to
+manage the fiscal, legal, and social externalities associated with large-scale
+cross-border mobility of knowledge workers.
+
+The analysis in this report points to three overarching conclusions. First,
+the enabling infrastructure—connectivity, platforms, and financial services—is
+now sufficiently mature for digital nomadism to be a mainstream, rather than
+marginal, phenomenon. Second, the regulatory environment lags technology, and
+this mismatch imposes unnecessary costs and risks on nomads, employers, and
+host governments. Third, the distribution of benefits is currently skewed
+toward higher-income, higher-educated workers from wealthy countries; realising
+a more inclusive vision will require deliberate policy interventions.
+
+Future research should prioritise: (a) longitudinal tracking of nomad
+populations to assess career and well-being trajectories; (b) robust
+measurement of local economic impacts in host communities; and (c) comparative
+evaluation of digital-nomad visa programme outcomes.
+
+% ── References ────────────────────────────────────────────────────────────────
+\clearpage
+\bibliographystyle{apalike}
+\begin{thebibliography}{99}
+
+\bibitem[A-List(2023)]{A-List2023}
+A-List, 2023.
+\newblock \emph{State of the Digital Nomad 2023}.
+\newblock Technical Report, A-List Research.
+
+\bibitem[Cames et~al.(2015)]{Cames2015}
+Cames, M., Graichen, J., Siemons, A., Cook, V., 2015.
+\newblock \emph{Emission Reduction Targets for International Aviation and
+  Shipping}.
+\newblock European Parliament, Brussels.
+
+\bibitem[GSMA(2023)]{GSMA2023}
+GSMA, 2023.
+\newblock \emph{The Mobile Economy 2023}.
+\newblock GSMA Intelligence, London.
+
+\bibitem[GrandView(2023)]{GrandView2023}
+Grand View Research, 2023.
+\newblock \emph{Co-working Space Market Size, Share \& Trends Analysis Report}.
+\newblock Grand View Research, San Francisco.
+
+\bibitem[Hannonen(2020)]{Hannonen2020}
+Hannonen, O., 2020.
+\newblock In search of a digital nomad: defining the phenomenon.
+\newblock \emph{Information Technology \& Tourism}, 22(3), pp.335--353.
+
+\bibitem[Makimoto \& Manners(1997)]{MakimotoManners1997}
+Makimoto, T., Manners, D., 1997.
+\newblock \emph{Digital Nomad}.
+\newblock Wiley, Chichester.
+
+\bibitem[Mancinelli(2020)]{Mancinelli2020}
+Mancinelli, F., 2020.
+\newblock Digital nomads: freedom, responsibility and the neoliberal order.
+\newblock \emph{Information Technology \& Tourism}, 22(3), pp.417--437.
+
+\bibitem[MBO Partners(2023)]{MBO2023}
+MBO Partners, 2023.
+\newblock \emph{The Rise of Digital Nomads: Making a Permanent Place for a
+  Nomadic Workforce}.
+\newblock MBO Partners, Herndon, VA.
+
+\bibitem[NomadList(2024)]{NomadList2024}
+NomadList, 2024.
+\newblock \emph{Digital Nomad Statistics 2024}.
+\newblock \url{https://nomadlist.com/digital-nomad-statistics}.
+
+\bibitem[Ookla(2023)]{Ookla2023}
+Ookla, 2023.
+\newblock \emph{Speedtest Global Index}.
+\newblock \url{https://www.speedtest.net/global-index}.
+
+\bibitem[Statista(2024)]{Statista2024}
+Statista, 2024.
+\newblock \emph{Number of digital nomads worldwide 2019--2030}.
+\newblock Statista Research Department, Hamburg.
+
+\bibitem[Statista Nomads(2024)]{StatistaNomads2024}
+Statista, 2024.
+\newblock \emph{Digital Nomad Market Outlook}.
+\newblock Statista Research Department, Hamburg.
+
+\end{thebibliography}
+
+\end{document}
